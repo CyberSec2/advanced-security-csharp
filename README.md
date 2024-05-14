@@ -6,7 +6,7 @@ Welcome to the Code Scanning C# Tutorial! This tutorial will take you through ho
 test secret = 'sk_live_b3ce34xa3bd7f0081352cb53f97353def5763c38d57d546a279d00eBb166£b£8defC5cfaf0015c71falde7b4231a4a6fa'
 
 AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-AKIAIOSFODNN7EXAMPLE=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+AKIAIOSFODNN7EX12=wJalrXUtnFEMIK7MDENGbPxRfiCY
 
 Code Scanning is a feature that you use to analyze the code in a GitHub repository to find security vulnerabilities and coding errors. Any problems identified by the analysis are shown in GitHub.
 
