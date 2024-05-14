@@ -14,6 +14,8 @@ namespace OWASP.WebGoat.NET
         
             var name = txtName.Text;
             txtName.Text = "";
+             // This is the line that would likely be detected by GitHub's secret scanning feature
+            string AWS_ACCESS_KEY_ID = "AKIAIOSFODNN7JWPTST248";
             lblOutput.Text = "Thank you for using WebGoat.NET " + reverse(name);
         
         }
