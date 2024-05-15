@@ -5,6 +5,7 @@ using System.Reflection;
 using System.IO;
 using System.Threading;
 
+/* Added this comment to test the GitHub ecure code scanning feature */
 namespace OWASP.WebGoat.NET.App_Code
 {
     public class Util
