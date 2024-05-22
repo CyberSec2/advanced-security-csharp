@@ -1,0 +1,29 @@
+name: Create issue for code scanning alert
+
+on:
+  code_scanning_alert:
+    types: [appeared]
+
+jobs:
+  create_issue:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create issue
+      uses: actions/github-script@v5
+      with:
+        script: |
+          const issueTitle = "Code scanning alert: " + context.payload.alert.rule.description;
+          const issueBody = `A new code scanning alert has been detected:
+
+- Rule: ${context.payload.alert.rule.description}
+- Severity: ${context.payload.alert.rule.severity}
+- File: ${context.payload.alert.instances[0].ref}
+- Line: ${context.payload.alert.instances[0].analysis_key}
+
+[View the code scanning alert for details](https://github.com/${context.repo.owner}/${context.repo.repo}/security/code-scanning/${context.payload.alert.number})`;
+
+          github.rest.issues.create({
+            ...context.repo,
+            title: issueTitle,
+            body: issueBody
+          })
